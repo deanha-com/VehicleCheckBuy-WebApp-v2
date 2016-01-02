@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="Second hand car buying made easy using Vehichle Check Buy" />
+		<meta name="keywords" content="car checks, MOT, MOT history, DVLA, pre-purchase" />
+		<meta name="author" content="Dean Ha"/>
+		<title>MOT Status Check - VCB</title>
+		<!-- # CSS STYLING -->
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<style>html, body { height: 100% }</style> <!-- NEED THIS FOR IFRAME TO WORK FULL SIZE -->
+
+		<!-- # SCRIPTS -->
+		<script src="js/modernizr.custom.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://camend.com/ccb/ccb.js"></script>
+		
+		<!-- # WEB APP SETTINGS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- # Favicons -->
+		<link rel="icon" type="image/png" href="http://plugins.adchsm.me/slidebars/images/icons/16.png">
+		<link rel="icon" type="image/png" href="http://plugins.adchsm.me/slidebars/images/icons/32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="http://plugins.adchsm.me/slidebars/images/icons/48.png" sizes="48x48">
+		<link rel="icon" type="image/png" href="http://plugins.adchsm.me/slidebars/images/icons/64.png"	sizes="64x64">
+		
+		<!-- # Apple Touch Icons -->
+		<link rel="apple-touch-icon" href="http://plugins.adchsm.me/slidebars/images/icons/152.png"	sizes="120x120">
+		<link rel="apple-touch-icon" href="http://plugins.adchsm.me/slidebars/images/icons/120.png"	sizes="152x152">
+		<link rel="apple-touch-icon" href="http://plugins.adchsm.me/slidebars/images/icons/76.png" sizes="76x76">
+		<link rel="apple-touch-icon" href="http://plugins.adchsm.me/slidebars/images/icons/114.png" sizes="114x114">
+		<link rel="apple-touch-icon" href="http://plugins.adchsm.me/slidebars/images/icons/57.png" sizes="57x57">
+		<link rel="apple-touch-icon" href="http://plugins.adchsm.me/slidebars/images/icons/144.png" sizes="144x144">
+		<link rel="apple-touch-icon" href="http://plugins.adchsm.me/slidebars/images/icons/72.png" sizes="72x72">
+			
+		<!-- # Startup Images -->
+		<!-- # iPhone 5, 5S, 5C -->
+		<link href="http://plugins.adchsm.me/slidebars/images/startup/1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+		
+		<!-- # iPhone 4, 4S -->
+		<link href="http://plugins.adchsm.me/slidebars/images/startup/920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+		
+		<!-- # iPhone, 3G, 3GS -->
+		<link href="http://plugins.adchsm.me/slidebars/images/startup/460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+		
+		<!-- # iPad Retina, Mini Retina Portrait -->
+		<link href="http://plugins.adchsm.me/slidebars/images/startup/2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+		
+		<!-- # iPad Retina, Mini Retina Landscape -->
+		<link href="http://plugins.adchsm.me/slidebars/images/startup/1496.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+		
+		<!-- # iPad, Mini Portrait -->
+		<link href="http://plugins.adchsm.me/slidebars/images/startup/1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+		<!-- # iPad, Mini Landscape -->
+		<link href="http://plugins.adchsm.me/slidebars/images/startup/748.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+	</head>
+	<body>
+<!-- 		<div class="container"> MUST BE DISABLED FOR FULLSCREEN IFRAME-->
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li><a href="/vcb/motStatus.html" class="gn-icon gn-icon-search">Vehicle Enquiry</a></li>
+								<li><a href="/vcb/motHistory.html" class="gn-icon gn-icon-article">Vehicle MOT History</a></li>
+								<li><a></a>
+									<ul class="gn-submenu">
+										<li><a class="gn-icon gn-icon-archive">Pre-purchase Checks</a></li>
+										<li><a class="gn-icon gn-icon-pictures">Bargaining Tips</a></li>
+										<li><a class="gn-icon gn-icon-cog">Settings</a></li>
+										<li><a class="gn-icon gn-icon-help">Help</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="/vcb/"><img src="https://cdn4.iconfinder.com/data/icons/car-silhouettes/1000/sedan-512.png" style="height:55px; padding:5px 5px;"></a></li>
+				<li></li>
+			</ul>
+			</header>  -->
+			<iframe min-height: 95% id="motStatus" src="https://www.vehicleenquiry.service.gov.uk/" style=" width:100%; height:90%" frameborder="0">
+				  <p>Your browser does not support iframes.</p>
+			</iframe>
+			<div style="text-align: center; padding:0px 5px;">
+				<span style=" font-size:8px; color:white; a:skyblue;"><style>a {color: skyblue;}</style>
+					Contains public sector information licensed under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0.</a>
+				</span>
+			</div>
+<!-- 		</div> MUST BE DISABLED FOR FULLSCREEN IFRAME-->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+	</body>
+</html>
+
+	
